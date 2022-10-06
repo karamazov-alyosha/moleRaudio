@@ -69,6 +69,9 @@
 *
 **********************************************************************************************/
 
+#define RAUDIO_STANDALONE
+#define SUPPORT_FILEFORMAT_WAV
+#define SUPPORT_FILEFORMAT_MP3
 #if defined(RAUDIO_STANDALONE)
     #include "raudio.h"
 #else
