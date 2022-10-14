@@ -69,6 +69,8 @@
 *
 **********************************************************************************************/
 
+#define RAUDIO_STANDALONE
+#define SUPPORT_FILEFORMAT_MP3
 #if defined(RAUDIO_STANDALONE)
     #include "raudio.h"
 #else
@@ -267,6 +269,17 @@ typedef struct tagBITMAPINFOHEADER {
 //----------------------------------------------------------------------------------
 // Types and Structures Definition
 //----------------------------------------------------------------------------------
+
+/* Mole Plusification */
+#pragma warning(disable : 4996)
+#define NULL ((void *)0)
+#define SEEK_END    2
+#define SEEK_CUR    1
+#define SEEK_SET    0
+typedef void (*AudioCallback)(void*, ma_uint32);
+typedef struct rAudioBuffer rAudioBuffer;
+typedef struct rAudioProcessor rAudioProcessor;
+/* End Mole Plusification */
 
 // Music context type
 // NOTE: Depends on data structure provided by the library
